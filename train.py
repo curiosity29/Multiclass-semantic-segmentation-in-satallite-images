@@ -7,7 +7,6 @@ import segmentation_models as sm
 
 from matplotlib import pyplot as plt
 from proposed_model import multi_unet_model, jacard_coef
-from patchify import patchify
 from PIL import Image
 
 #import segmentation_models as sm
