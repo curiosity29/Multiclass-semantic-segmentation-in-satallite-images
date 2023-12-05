@@ -50,7 +50,7 @@ if __name__ == '__main__':
     X_train, X_test, y_train, y_test = train_test_split(image_dataset, mask_dataset, test_size=0.3, random_state=42)
 
     # Loss functions setting
-    weights = [1.0/7] * 7
+    weights = [0] + [1.0/7] * 7
     dice_loss = sm.losses.DiceLoss(class_weights=weights, class_indexes = np.array(range(1,8)))
     focal_loss = sm.losses.CategoricalFocalLoss(class_indexes = np.array(range(1,8)))
     total_loss = dice_loss + (1 * focal_loss)
