@@ -22,7 +22,7 @@ def get_dataset(base_dir):
         X.append(np.load(path).transpose((1,2,0)))
 
     for file in files:
-        path = file["labels"]
+        path = file["mask"]
         y.append(np.load(path).transpose((1,2,0))) 
 
     return X, y
