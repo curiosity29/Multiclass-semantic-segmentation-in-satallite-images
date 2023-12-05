@@ -1,5 +1,5 @@
 import os
-import cv2
+os.environ["SM_FRAMEWORK"] = "tf.keras"
 import numpy
 import numpy as np
 import tensorflow as tf
