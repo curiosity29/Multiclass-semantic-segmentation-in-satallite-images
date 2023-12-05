@@ -19,11 +19,11 @@ def get_dataset(base_dir):
 
     for file in files:
         path = file["image"]
-        X.append(np.load(path).transpose((1,2,0)))
+        X.append(np.load(path).transpose((1,2,0))/255)
 
     for file in files:
         path = file["mask"]
-        y.append(np.load(path)) 
+        y.append(np.load(path).astype(int)) 
 
     return np.array(X), np.array(y)
 

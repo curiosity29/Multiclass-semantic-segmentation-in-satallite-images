@@ -85,6 +85,9 @@ if __name__ == '__main__':
     # model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=metrics)
     model.summary()
 
+    print(f"shape of x, y train: {X_train.shape}, {y_train.shape}")
+    
+
     history1 = model.fit(X_train, y_train,
                          batch_size=8,
                          verbose=1,
