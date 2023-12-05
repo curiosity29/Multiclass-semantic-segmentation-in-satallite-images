@@ -25,5 +25,5 @@ def get_dataset(base_dir):
         path = file["mask"]
         y.append(np.load(path)) 
 
-    return X, y
+    return np.array(X), np.array(y)
 
