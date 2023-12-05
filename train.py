@@ -53,7 +53,8 @@ if __name__ == '__main__':
     weights = [0] + [1.0/7] * 7
     dice_loss = sm.losses.DiceLoss(class_weights=weights, class_indexes = np.array(range(1,8)))
     focal_loss = sm.losses.CategoricalFocalLoss(class_indexes = np.array(range(1,8)))
-    total_loss = dice_loss + (1 * focal_loss)
+    # total_loss = dice_loss + (1 * focal_loss)
+    total_loss = dice_loss + focal_loss
 
     # Load model
     IMG_HEIGHT = X_train.shape[1]
